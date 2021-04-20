@@ -1,7 +1,7 @@
 name := """sandbox-play"""
 organization := "jp.co.recruitms"
 
-version := "1.0-SNAPSHOT"
+version := "1.0.0"
 
 scalaVersion := "2.13.5"
 
@@ -15,6 +15,7 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala, SwaggerPlugin).a
 swaggerTarget := new File("./specs/swagger")
 swaggerPrettyJson := true
 swaggerFileName := "apiSpecs.json"
+swaggerV3 := true
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "jp.co.recruitms.controllers._"
 

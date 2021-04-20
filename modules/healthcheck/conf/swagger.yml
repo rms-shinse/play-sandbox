@@ -1,7 +1,8 @@
-swagger: "2.0"
+openapi: 3
 info:
   title: "sandbox-play-health"
   description: "SandBox for PlayFramework"
+  version: "1.0.0"
 consumes:
   - application/json
 produces:

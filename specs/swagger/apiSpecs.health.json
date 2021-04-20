@@ -1,4 +1,8 @@
 {
+  "components" : {
+    "schemas" : { }
+  },
+  "openapi" : 3,
   "paths" : {
     "/" : {
       "get" : {
@@ -8,13 +12,11 @@
     }
   },
   "produces" : [ "application/json" ],
-  "definitions" : { },
-  "swagger" : "2.0",
   "consumes" : [ "application/json" ],
   "info" : {
     "description" : "SandBox for PlayFramework",
     "title" : "sandbox-play-health",
-    "version" : "1.0-SNAPSHOT"
+    "version" : "1.0.0"
   },
   "tags" : [ {
     "name" : "health"
