@@ -8,10 +8,11 @@ scalaVersion := "2.13.5"
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
 
-lazy val health = (project in file("modules/healthcheck")).enablePlugins(PlayJava)
+lazy val health = (project in file("modules/healthcheck")).enablePlugins(PlayJava, SwaggerPlugin)
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala).aggregate(health).dependsOn(health)
+lazy val root = (project in file(".")).enablePlugins(PlayScala, SwaggerPlugin).aggregate(health).dependsOn(health)
 
+swaggerTarget := new File("./specs/swagger")
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "jp.co.recruitms.controllers._"
 
