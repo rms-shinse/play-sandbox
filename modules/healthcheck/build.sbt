@@ -6,4 +6,6 @@ version := "1.0-SNAPSHOT"
 scalaVersion := "2.13.5"
 swaggerRoutesFile := "health.routes"
 swaggerPlayJava := true
-swaggerTarget := new File("./specs/swagger/health")
+swaggerTarget := new File("./specs/swagger")
+swaggerPrettyJson := true
+swaggerFileName := "apiSpecs.health.json"

@@ -13,6 +13,8 @@ lazy val health = (project in file("modules/healthcheck")).enablePlugins(PlayJav
 lazy val root = (project in file(".")).enablePlugins(PlayScala, SwaggerPlugin).aggregate(health).dependsOn(health)
 
 swaggerTarget := new File("./specs/swagger")
+swaggerPrettyJson := true
+swaggerFileName := "apiSpecs.json"
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "jp.co.recruitms.controllers._"
 
