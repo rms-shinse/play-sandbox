@@ -1,5 +1,5 @@
-name := """sandbox-play-health.routes-check"""
-organization := "jp.co.recruitms.health.routes"
+name := """sandbox-play-health"""
+organization := "jp.co.recruitms.health"
 
 version := "1.0.0"
 
