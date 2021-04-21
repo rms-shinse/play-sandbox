@@ -4,6 +4,7 @@
 # ~~~~
 GET     /                           controllers.HomeController.index()
 
--> /dev devtools.Routes
+-> /auth   auth.Routes
+-> /dev    devtools.Routes
 -> /health health.Routes
 

@@ -7,19 +7,7 @@
     "/" : {
       "get" : {
         "operationId" : "index",
-        "tags" : [ "routes" ]
-      }
-    },
-    "/auth" : {
-      "get" : {
-        "operationId" : "index",
         "tags" : [ "auth" ]
-      }
-    },
-    "/health" : {
-      "get" : {
-        "operationId" : "index",
-        "tags" : [ "health" ]
       }
     }
   },
@@ -27,14 +15,10 @@
   "consumes" : [ "application/json" ],
   "info" : {
     "description" : "SandBox for PlayFramework",
-    "title" : "sandbox-play",
+    "title" : "sandbox-play-auth",
     "version" : "1.0.0"
   },
   "tags" : [ {
-    "name" : "routes"
-  }, {
     "name" : "auth"
-  }, {
-    "name" : "health"
   } ]
 }

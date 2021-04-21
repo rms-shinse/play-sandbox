@@ -1,0 +1,9 @@
+openapi: "3.0.3"
+info:
+  title: "sandbox-play-auth"
+  description: "SandBox for PlayFramework"
+  version: "1.0.0"
+consumes:
+  - application/json
+produces:
+  - application/json
