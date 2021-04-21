@@ -3,4 +3,7 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 GET     /                           controllers.HomeController.index()
+
+-> /dev devtools.Routes
 -> /health health.Routes
+

@@ -2,7 +2,7 @@
   "components" : {
     "schemas" : { }
   },
-  "openapi" : 3,
+  "openapi" : "3.0.3",
   "paths" : {
     "/" : {
       "get" : {

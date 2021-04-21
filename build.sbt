@@ -8,9 +8,10 @@ scalaVersion := "2.13.5"
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
 
-lazy val health = (project in file("modules/healthcheck")).enablePlugins(PlayJava, SwaggerPlugin)
+lazy val devtools = (project in file("modules/devtools")).enablePlugins(PlayJava)
+lazy val health   = (project in file("modules/healthcheck")).enablePlugins(PlayJava, SwaggerPlugin)
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala, SwaggerPlugin).aggregate(health).dependsOn(health)
+lazy val root = (project in file(".")).enablePlugins(PlayScala, SwaggerPlugin).aggregate(devtools, health).dependsOn(devtools, health)
 
 swaggerTarget := new File("./specs/swagger")
 swaggerPrettyJson := true
