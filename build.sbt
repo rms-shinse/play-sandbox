@@ -13,16 +13,17 @@ val commonSettings = Seq(
   scalaVersion := "2.13.5",
   swaggerTarget := new File("./specs/swagger"),
   swaggerV3 := true,
-  swaggerPrettyJson := true
+  swaggerPrettyJson := true,
+  swaggerDomainNameSpaces := Seq("models")
 )
 
-lazy val auth     = (project in file("modules/auth"))
+lazy val auth = (project in file("modules/auth"))
   .settings(commonSettings)
-  .enablePlugins(PlayScala, SwaggerPlugin)
+  .enablePlugins(PlayJava, SwaggerPlugin)
 lazy val devtools = (project in file("modules/devtools"))
   .settings(commonSettings)
   .enablePlugins(PlayJava)
-lazy val health   = (project in file("modules/healthcheck"))
+lazy val health = (project in file("modules/healthcheck"))
   .settings(commonSettings)
   .enablePlugins(PlayJava, SwaggerPlugin)
 
@@ -32,7 +33,4 @@ lazy val root = (project in file("."))
   .aggregate(auth, devtools, health)
   .dependsOn(auth, devtools, health)
 
-swaggerTarget := new File("./specs/swagger")
-swaggerPrettyJson := true
 swaggerFileName := "apiSpecs.json"
-swaggerV3 := true

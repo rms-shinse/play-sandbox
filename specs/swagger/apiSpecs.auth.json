@@ -4,9 +4,55 @@
   },
   "openapi" : "3.0.3",
   "paths" : {
-    "/" : {
+    "/signin" : {
       "get" : {
-        "operationId" : "index",
+        "operationId" : "signIn",
+        "tags" : [ "auth" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "userName",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        }, {
+          "in" : "query",
+          "name" : "password",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        } ]
+      }
+    },
+    "/signup" : {
+      "post" : {
+        "operationId" : "signUp",
+        "tags" : [ "auth" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "userName",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        }, {
+          "in" : "query",
+          "name" : "password",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        } ]
+      }
+    },
+    "/logout" : {
+      "post" : {
+        "operationId" : "logout",
         "tags" : [ "auth" ]
       }
     }

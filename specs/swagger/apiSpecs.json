@@ -10,9 +10,55 @@
         "tags" : [ "routes" ]
       }
     },
-    "/auth" : {
+    "/auth/signin" : {
       "get" : {
-        "operationId" : "index",
+        "operationId" : "signIn",
+        "tags" : [ "auth" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "userName",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        }, {
+          "in" : "query",
+          "name" : "password",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        } ]
+      }
+    },
+    "/auth/signup" : {
+      "post" : {
+        "operationId" : "signUp",
+        "tags" : [ "auth" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "userName",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        }, {
+          "in" : "query",
+          "name" : "password",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        } ]
+      }
+    },
+    "/auth/logout" : {
+      "post" : {
+        "operationId" : "logout",
         "tags" : [ "auth" ]
       }
     },
