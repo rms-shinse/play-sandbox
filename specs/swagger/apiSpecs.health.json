@@ -1,0 +1,24 @@
+{
+  "components" : {
+    "schemas" : { }
+  },
+  "openapi" : "3.0.3",
+  "paths" : {
+    "/" : {
+      "get" : {
+        "operationId" : "index",
+        "tags" : [ "health" ]
+      }
+    }
+  },
+  "produces" : [ "application/json" ],
+  "consumes" : [ "application/json" ],
+  "info" : {
+    "description" : "SandBox for PlayFramework",
+    "title" : "sandbox-play-health",
+    "version" : "1.0.0"
+  },
+  "tags" : [ {
+    "name" : "health"
+  } ]
+}

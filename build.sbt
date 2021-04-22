@@ -1,17 +1,36 @@
 name := """sandbox-play"""
-organization := "jp.co.recruit-ms"
+organization := "jp.co.recruitms"
 
-version := "1.0-SNAPSHOT"
-
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+version := "1.0.0"
 
 scalaVersion := "2.13.5"
 
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
 
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "jp.co.recruit-ms.controllers._"
+val commonSettings = Seq(
+  version := "1.0.0",
+  scalaVersion := "2.13.5",
+  swaggerTarget := new File("./specs/swagger"),
+  swaggerV3 := true,
+  swaggerPrettyJson := true,
+  swaggerDomainNameSpaces := Seq("models")
+)
 
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "jp.co.recruit-ms.binders._"
+lazy val auth = (project in file("modules/auth"))
+  .settings(commonSettings)
+  .enablePlugins(PlayJava, SwaggerPlugin)
+lazy val devtools = (project in file("modules/devtools"))
+  .settings(commonSettings)
+  .enablePlugins(PlayJava)
+lazy val health = (project in file("modules/healthcheck"))
+  .settings(commonSettings)
+  .enablePlugins(PlayJava, SwaggerPlugin)
+
+lazy val root = (project in file("."))
+  .settings(commonSettings)
+  .enablePlugins(PlayScala, SwaggerPlugin)
+  .aggregate(auth, devtools, health)
+  .dependsOn(auth, devtools, health)
+
+swaggerFileName := "apiSpecs.json"

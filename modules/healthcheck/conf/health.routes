@@ -1,0 +1,1 @@
+GET     /   jp.co.recruitms.health.controllers.HealthsController.index()

@@ -1,0 +1,86 @@
+{
+  "components" : {
+    "schemas" : { }
+  },
+  "openapi" : "3.0.3",
+  "paths" : {
+    "/" : {
+      "get" : {
+        "operationId" : "index",
+        "tags" : [ "routes" ]
+      }
+    },
+    "/auth/signin" : {
+      "get" : {
+        "operationId" : "signIn",
+        "tags" : [ "auth" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "userName",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        }, {
+          "in" : "query",
+          "name" : "password",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        } ]
+      }
+    },
+    "/auth/signup" : {
+      "post" : {
+        "operationId" : "signUp",
+        "tags" : [ "auth" ],
+        "parameters" : [ {
+          "in" : "query",
+          "name" : "userName",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        }, {
+          "in" : "query",
+          "name" : "password",
+          "schema" : {
+            "default" : "",
+            "type" : "string"
+          },
+          "required" : false
+        } ]
+      }
+    },
+    "/auth/logout" : {
+      "post" : {
+        "operationId" : "logout",
+        "tags" : [ "auth" ]
+      }
+    },
+    "/health" : {
+      "get" : {
+        "operationId" : "index",
+        "tags" : [ "health" ]
+      }
+    }
+  },
+  "produces" : [ "application/json" ],
+  "consumes" : [ "application/json" ],
+  "info" : {
+    "description" : "SandBox for PlayFramework",
+    "title" : "sandbox-play",
+    "version" : "1.0.0"
+  },
+  "tags" : [ {
+    "name" : "routes"
+  }, {
+    "name" : "auth"
+  }, {
+    "name" : "health"
+  } ]
+}
