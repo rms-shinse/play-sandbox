@@ -38,22 +38,13 @@
         "operationId" : "signUp",
         "tags" : [ "auth" ],
         "parameters" : [ {
-          "in" : "query",
-          "name" : "userName",
+          "in" : "body",
+          "name" : "body",
           "schema" : {
-            "default" : "",
-            "type" : "string"
-          },
-          "required" : false
-        }, {
-          "in" : "query",
-          "name" : "password",
-          "schema" : {
-            "default" : "",
-            "type" : "string"
-          },
-          "required" : false
-        } ]
+            "$ref" : "#/definitions/com.github.sizer.sandbox.play.auth.controllers.requests.ReqAuthenticateSignUp"
+          }
+        } ],
+        "consumes" : [ "application/json" ]
       }
     },
     "/auth/logout" : {

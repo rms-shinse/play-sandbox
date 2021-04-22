@@ -1,3 +1,9 @@
 GET  /signin  com.github.sizer.sandbox.play.auth.controllers.AuthenticateController.signIn(userName: String?="", password: String?="")
-POST /signup  com.github.sizer.sandbox.play.auth.controllers.AuthenticateController.signUp(userName: String?="", password: String?="")
+###
+#  parameters:
+#    - name: body
+#      schema:
+#        $ref: '#/definitions/com.github.sizer.sandbox.play.auth.controllers.requests.ReqAuthenticateSignUp'
+###
+POST /signup  com.github.sizer.sandbox.play.auth.controllers.AuthenticateController.signUp(request: Request)
 POST /logout  com.github.sizer.sandbox.play.auth.controllers.AuthenticateController.logout(request: Request)
