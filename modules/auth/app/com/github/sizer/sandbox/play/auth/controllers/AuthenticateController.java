@@ -1,9 +1,9 @@
-package jp.co.recruitms.auth.controllers;
+package com.github.sizer.sandbox.play.auth.controllers;
 
-import jp.co.recruitms.auth.security.Authentication;
-import jp.co.recruitms.auth.security.PlayAuthenticator;
-import jp.co.recruitms.database.models.User;
-import jp.co.recruitms.database.db.Users;
+import com.github.sizer.sandbox.play.auth.security.Authentication;
+import com.github.sizer.sandbox.play.auth.security.PlayAuthenticator;
+import com.github.sizer.sandbox.play.database.models.User;
+import com.github.sizer.sandbox.play.database.db.Users;
 import play.mvc.*;
 
 public class AuthenticateController extends Controller {

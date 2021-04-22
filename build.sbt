@@ -1,5 +1,5 @@
 name := """sandbox-play"""
-organization := "jp.co.recruitms"
+organization := "com.github.sizer.sandbox.play"
 
 version := "1.0.0"
 

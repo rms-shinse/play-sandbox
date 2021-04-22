@@ -1,1 +1,1 @@
-GET     /   jp.co.recruitms.health.controllers.HealthsController.index()
+GET     /   com.github.sizer.sandbox.play.health.controllers.HealthsController.index()

@@ -1,4 +1,4 @@
-package jp.co.recruitms.database.models;
+package com.github.sizer.sandbox.play.database.models;
 
 
 public class User {

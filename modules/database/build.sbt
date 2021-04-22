@@ -1,2 +1,2 @@
 name := """sandbox-play-database"""
-organization := "jp.co.recruitms.database"
+organization := "com.github.sizer.sandbox.play.database"

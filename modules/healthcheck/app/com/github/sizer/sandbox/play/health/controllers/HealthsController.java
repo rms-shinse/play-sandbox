@@ -1,4 +1,4 @@
-package jp.co.recruitms.health.controllers;
+package com.github.sizer.sandbox.play.health.controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
