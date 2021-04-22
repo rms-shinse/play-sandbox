@@ -17,9 +17,13 @@ val commonSettings = Seq(
   swaggerDomainNameSpaces := Seq("models")
 )
 
+lazy val database = (project in file("modules/database"))
+  .settings(commonSettings)
+
 lazy val auth = (project in file("modules/auth"))
   .settings(commonSettings)
   .enablePlugins(PlayJava, SwaggerPlugin)
+  .dependsOn(database)
 lazy val devtools = (project in file("modules/devtools"))
   .settings(commonSettings)
   .enablePlugins(PlayJava)
@@ -30,7 +34,7 @@ lazy val health = (project in file("modules/healthcheck"))
 lazy val root = (project in file("."))
   .settings(commonSettings)
   .enablePlugins(PlayScala, SwaggerPlugin)
-  .aggregate(auth, devtools, health)
-  .dependsOn(auth, devtools, health)
+  .aggregate(auth, database, devtools, health)
+  .dependsOn(auth, database, devtools, health)
 
 swaggerFileName := "apiSpecs.json"

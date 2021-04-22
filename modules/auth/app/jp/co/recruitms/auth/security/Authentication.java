@@ -1,6 +1,6 @@
 package jp.co.recruitms.auth.security;
 
-import jp.co.recruitms.auth.models.db.Users;
+import jp.co.recruitms.database.db.Users;
 import play.mvc.Http;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
-package jp.co.recruitms.auth.models.db;
+package jp.co.recruitms.database.db;
 
-import jp.co.recruitms.auth.models.User;
+import jp.co.recruitms.database.models.User;
 
 import java.util.HashMap;
 import java.util.Map;

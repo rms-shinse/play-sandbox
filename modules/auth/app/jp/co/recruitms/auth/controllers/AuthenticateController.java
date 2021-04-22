@@ -2,8 +2,8 @@ package jp.co.recruitms.auth.controllers;
 
 import jp.co.recruitms.auth.security.Authentication;
 import jp.co.recruitms.auth.security.PlayAuthenticator;
-import jp.co.recruitms.auth.models.User;
-import jp.co.recruitms.auth.models.db.Users;
+import jp.co.recruitms.database.models.User;
+import jp.co.recruitms.database.db.Users;
 import play.mvc.*;
 
 public class AuthenticateController extends Controller {

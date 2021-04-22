@@ -1,4 +1,4 @@
-package jp.co.recruitms.auth.models;
+package jp.co.recruitms.database.models;
 
 
 public class User {
