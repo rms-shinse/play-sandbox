@@ -1,6 +1,6 @@
-package jp.co.recruitms.auth.models.db;
+package com.github.sizer.sandbox.play.database.db;
 
-import jp.co.recruitms.auth.models.User;
+import com.github.sizer.sandbox.play.database.models.User;
 
 import java.util.HashMap;
 import java.util.Map;

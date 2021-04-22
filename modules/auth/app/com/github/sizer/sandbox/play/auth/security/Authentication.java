@@ -1,6 +1,6 @@
-package jp.co.recruitms.auth.security;
+package com.github.sizer.sandbox.play.auth.security;
 
-import jp.co.recruitms.auth.models.db.Users;
+import com.github.sizer.sandbox.play.database.db.Users;
 import play.mvc.Http;
 
 import java.util.Optional;

@@ -1,5 +1,5 @@
 name := """sandbox-play-health"""
-organization := "jp.co.recruitms.health"
+organization := "com.github.sizer.sandbox.play.health"
 
 swaggerRoutesFile := "health.routes"
 swaggerFileName := "apiSpecs.health.json"

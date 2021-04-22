@@ -1,4 +1,4 @@
-package jp.co.recruitms.auth.security;
+package com.github.sizer.sandbox.play.auth.security;
 
 import play.mvc.Http;
 import play.mvc.Result;
